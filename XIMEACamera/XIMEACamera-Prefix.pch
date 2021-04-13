@@ -1,0 +1,22 @@
+//
+//  XIMEACamera-Prefix.pch
+//  XIMEACamera
+//
+//  Created by Christopher Stawarz on 4/13/21.
+//  Copyright © 2021 The MWorks Project. All rights reserved.
+//
+
+#ifndef XIMEACamera_Prefix_pch
+#define XIMEACamera_Prefix_pch
+
+#include <m3api/xiApi.h>
+
+#ifdef __cplusplus
+
+#include <MWorksCore/IODevice.h>
+#include <MWorksCore/Plugin.h>
+#include <MWorksCore/StandardComponentFactory.h>
+
+#endif /* defined(__cplusplus) */
+
+#endif /* XIMEACamera_Prefix_pch */

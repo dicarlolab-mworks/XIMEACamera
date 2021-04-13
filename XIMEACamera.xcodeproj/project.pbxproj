@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E1D1481F2626301400ACBBAF /* Install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E1D148202626301400ACBBAF /* Build configuration list for PBXAggregateTarget "Install" */;
+			buildPhases = (
+				E1D148392626385500ACBBAF /* CopyFiles */,
+			);
+			dependencies = (
+				E1D1482D2626303500ACBBAF /* PBXTargetDependency */,
+			);
+			name = Install;
+			productName = Install;
+		};
+		E1D148252626302000ACBBAF /* Everything */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E1D148262626302000ACBBAF /* Build configuration list for PBXAggregateTarget "Everything" */;
+			buildPhases = (
+			);
+			dependencies = (
+				E1D1482F2626303E00ACBBAF /* PBXTargetDependency */,
+			);
+			name = Everything;
+			productName = Everything;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		E1D1481926262F3500ACBBAF /* XIMEACameraPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1D1481826262F3500ACBBAF /* XIMEACameraPlugin.cpp */; };
+		E1D1483A2626386000ACBBAF /* XIMEACamera.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1D1480E262623E500ACBBAF /* XIMEACamera.bundle */; };
+		E1D14842262639F200ACBBAF /* MWorksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D14841262639F200ACBBAF /* MWorksCore.framework */; };
+		E1D1484726263AC800ACBBAF /* m3api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D1484626263AC800ACBBAF /* m3api.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1D1482C2626303500ACBBAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D14806262623E500ACBBAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D1480D262623E500ACBBAF;
+			remoteInfo = XIMEACamera;
+		};
+		E1D1482E2626303E00ACBBAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1D14806262623E500ACBBAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1D1481F2626301400ACBBAF;
+			remoteInfo = Install;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1D148392626385500ACBBAF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(MW_PLUGINS_DIR)";
+			dstSubfolderSpec = 0;
+			files = (
+				E1D1483A2626386000ACBBAF /* XIMEACamera.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E1D1480E262623E500ACBBAF /* XIMEACamera.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XIMEACamera.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D14811262623E500ACBBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1D1481826262F3500ACBBAF /* XIMEACameraPlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XIMEACameraPlugin.cpp; sourceTree = "<group>"; };
+		E1D1481D26262FB600ACBBAF /* macOS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = macOS.xcconfig; sourceTree = "<group>"; };
+		E1D1481E26262FB600ACBBAF /* macOS_Plugin.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = macOS_Plugin.xcconfig; sourceTree = "<group>"; };
+		E1D1483F2626390600ACBBAF /* XIMEACamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XIMEACamera-Prefix.pch"; sourceTree = "<group>"; };
+		E1D14841262639F200ACBBAF /* MWorksCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MWorksCore.framework; path = "/Library/Application Support/MWorks/Frameworks/MWorksCore.framework"; sourceTree = "<absolute>"; };
+		E1D1484626263AC800ACBBAF /* m3api.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = m3api.framework; path = /Library/Frameworks/m3api.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E1D1480B262623E500ACBBAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D14842262639F200ACBBAF /* MWorksCore.framework in Frameworks */,
+				E1D1484726263AC800ACBBAF /* m3api.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1D14805262623E500ACBBAF = {
+			isa = PBXGroup;
+			children = (
+				E1D1481C26262F6000ACBBAF /* External Config */,
+				E1D14810262623E500ACBBAF /* XIMEACamera */,
+				E1D14840262639F200ACBBAF /* Frameworks */,
+				E1D1480F262623E500ACBBAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E1D1480F262623E500ACBBAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1D1480E262623E500ACBBAF /* XIMEACamera.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E1D14810262623E500ACBBAF /* XIMEACamera */ = {
+			isa = PBXGroup;
+			children = (
+				E1D1481826262F3500ACBBAF /* XIMEACameraPlugin.cpp */,
+				E1D1483E262638C700ACBBAF /* Supporting Files */,
+			);
+			path = XIMEACamera;
+			sourceTree = "<group>";
+		};
+		E1D1481C26262F6000ACBBAF /* External Config */ = {
+			isa = PBXGroup;
+			children = (
+				E1D1481D26262FB600ACBBAF /* macOS.xcconfig */,
+				E1D1481E26262FB600ACBBAF /* macOS_Plugin.xcconfig */,
+			);
+			name = "External Config";
+			path = "/Library/Application Support/MWorks/Developer/Xcode";
+			sourceTree = "<absolute>";
+		};
+		E1D1483E262638C700ACBBAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1D14811262623E500ACBBAF /* Info.plist */,
+				E1D1483F2626390600ACBBAF /* XIMEACamera-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E1D14840262639F200ACBBAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1D14841262639F200ACBBAF /* MWorksCore.framework */,
+				E1D1484626263AC800ACBBAF /* m3api.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E1D1480D262623E500ACBBAF /* XIMEACamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1D14814262623E500ACBBAF /* Build configuration list for PBXNativeTarget "XIMEACamera" */;
+			buildPhases = (
+				E1D1480A262623E500ACBBAF /* Sources */,
+				E1D1480B262623E500ACBBAF /* Frameworks */,
+				E1D1480C262623E500ACBBAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XIMEACamera;
+			productName = XIMEACamera;
+			productReference = E1D1480E262623E500ACBBAF /* XIMEACamera.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1D14806262623E500ACBBAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "The MWorks Project";
+				TargetAttributes = {
+					E1D1480D262623E500ACBBAF = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E1D1481F2626301400ACBBAF = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E1D148252626302000ACBBAF = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = E1D14809262623E500ACBBAF /* Build configuration list for PBXProject "XIMEACamera" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E1D14805262623E500ACBBAF;
+			productRefGroup = E1D1480F262623E500ACBBAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E1D1480D262623E500ACBBAF /* XIMEACamera */,
+				E1D1481F2626301400ACBBAF /* Install */,
+				E1D148252626302000ACBBAF /* Everything */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E1D1480C262623E500ACBBAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E1D1480A262623E500ACBBAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D1481926262F3500ACBBAF /* XIMEACameraPlugin.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1D1482D2626303500ACBBAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D1480D262623E500ACBBAF /* XIMEACamera */;
+			targetProxy = E1D1482C2626303500ACBBAF /* PBXContainerItemProxy */;
+		};
+		E1D1482F2626303E00ACBBAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1D1481F2626301400ACBBAF /* Install */;
+			targetProxy = E1D1482E2626303E00ACBBAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E1D14812262623E500ACBBAF /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		E1D14815262623E500ACBBAF /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D1481E26262FB600ACBBAF /* macOS_Plugin.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XIMEACamera/XIMEACamera-Prefix.pch";
+				INFOPLIST_FILE = XIMEACamera/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.mworks-project.XIMEACamera";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Development;
+		};
+		E1D148212626301400ACBBAF /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D1481D26262FB600ACBBAF /* macOS.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Development;
+		};
+		E1D148272626302000ACBBAF /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D1481D26262FB600ACBBAF /* macOS.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Development;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E1D14809262623E500ACBBAF /* Build configuration list for PBXProject "XIMEACamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D14812262623E500ACBBAF /* Development */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		E1D14814262623E500ACBBAF /* Build configuration list for PBXNativeTarget "XIMEACamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D14815262623E500ACBBAF /* Development */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		E1D148202626301400ACBBAF /* Build configuration list for PBXAggregateTarget "Install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D148212626301400ACBBAF /* Development */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+		E1D148262626302000ACBBAF /* Build configuration list for PBXAggregateTarget "Everything" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D148272626302000ACBBAF /* Development */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Development;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1D14806262623E500ACBBAF /* Project object */;
+}
