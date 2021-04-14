@@ -9,10 +9,15 @@
 #ifndef XIMEACamera_Prefix_pch
 #define XIMEACamera_Prefix_pch
 
+#include <CoreGraphics/CoreGraphics.h>
+#include <CoreServices/CoreServices.h>
+#include <ImageIO/ImageIO.h>
+
 #include <m3api/xiApi.h>
 
 #ifdef __cplusplus
 
+#include <MWorksCore/CFObjectPtr.h>
 #include <MWorksCore/IODevice.h>
 #include <MWorksCore/Plugin.h>
 #include <MWorksCore/StandardComponentFactory.h>
