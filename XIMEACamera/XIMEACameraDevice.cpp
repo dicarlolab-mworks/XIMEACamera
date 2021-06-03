@@ -240,6 +240,7 @@ void XIMEACameraDevice::captureImage(MWTime currentCaptureInterval) {
     }
     
     auto status = xiSetParamInt(handle, XI_PRM_TRG_SOFTWARE, 1);
+    const auto triggerTimeUS = clock->getCurrentTimeUS();
     if (status == XI_DEVICE_NOT_READY) {
         logError("Cannot trigger image capture: device not ready");
         return;
@@ -267,7 +268,6 @@ void XIMEACameraDevice::captureImage(MWTime currentCaptureInterval) {
         return;
     }
     
-    imageCaptureTimeUS = clock->getCurrentTimeUS();
     auto imageDataProvider = cf::ObjectPtr<CGDataProviderRef>::created(CGDataProviderCreateWithCFData(imageData.get()));
     image = CGImagePtr::created(CGImageCreate(imageInfo.width,
                                               imageInfo.height,
@@ -280,6 +280,7 @@ void XIMEACameraDevice::captureImage(MWTime currentCaptureInterval) {
                                               nullptr,
                                               false,
                                               kCGRenderingIntentPerceptual));
+    imageCaptureTimeUS = triggerTimeUS;
 }
 
 

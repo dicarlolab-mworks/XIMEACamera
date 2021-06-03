@@ -49,8 +49,8 @@ private:
     
     int imageDataSize;
     CGColorSpacePtr imageColorSpace;
-    MWTime imageCaptureTimeUS;
     CGImagePtr image;
+    MWTime imageCaptureTimeUS;
     
     boost::shared_ptr<ScheduleTask> captureTask;
     

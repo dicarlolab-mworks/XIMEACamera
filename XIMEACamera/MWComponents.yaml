@@ -39,9 +39,12 @@ parameters:
   - 
     name: image_data
     required: yes
-    description: >
-        Variable in which to store captured frames.  Each frame is stored as a
-        binary string containing a `JPEG
-        <https://en.wikipedia.org/wiki/JPEG>`_-encoded image.
+    description: |
+        Variable in which to store captured frames.
+
+        The value assigned to the variable is a binary string containing a `JPEG
+        <https://en.wikipedia.org/wiki/JPEG>`_-encoded image.  The time stamp of
+        the assignment is taken immediately after MWorks triggers the frame
+        capture.
 
 
