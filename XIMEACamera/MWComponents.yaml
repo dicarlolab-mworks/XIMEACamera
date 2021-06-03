@@ -1,0 +1,47 @@
+---
+
+
+name: XIMEA Camera Device
+signature: iodevice/ximea_camera
+isa: IODevice
+platform: macos
+description: |
+    Interface to a `XIMEA <https://www.ximea.com/>`_ camera.
+
+    MWorks configures the camera to capture 8-bit, grayscale images.  Each frame
+    capture is triggered by MWorks (i.e. software triggering).  In addition, the
+    output pin on the camera (OUT1 if there are multiple outputs) is configured
+    to be on during frame exposure.
+
+    Multiple cameras can be connected and used simultaneously, as long as
+    `serial_number`_ is specified for each device.
+parameters: 
+  - 
+    name: serial_number
+    example: 12345678
+    description: |
+        Serial number of the desired camera.
+
+        If only one camera is connected, this parameter can be omitted, and
+        MWorks will connect to the one available device.
+  - 
+    name: exposure_time
+    required: yes
+    example: 2ms
+    description: >
+        Exposure time for each captured frame.  Must be greater than zero.
+  - 
+    name: capture_interval
+    required: yes
+    example: 33.33ms
+    description: >
+        Interval between frame captures.  Must be greater than zero.
+  - 
+    name: image_data
+    required: yes
+    description: >
+        Variable in which to store captured frames.  Each frame is stored as a
+        binary string containing a `JPEG
+        <https://en.wikipedia.org/wiki/JPEG>`_-encoded image.
+
+

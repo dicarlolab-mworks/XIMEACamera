@@ -35,6 +35,7 @@
 /* Begin PBXBuildFile section */
 		E10809D22667DAE80004D224 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10809D12667DAE80004D224 /* ImageIO.framework */; };
 		E10809D42667DB130004D224 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10809D32667DB130004D224 /* CoreServices.framework */; };
+		E10809DC266937730004D224 /* MWComponents.yaml in Resources */ = {isa = PBXBuildFile; fileRef = E10809DB266937730004D224 /* MWComponents.yaml */; };
 		E138B5402649D3BE00F8E332 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E138B53F2649D3BE00F8E332 /* CoreGraphics.framework */; };
 		E1D1481926262F3500ACBBAF /* XIMEACameraPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1D1481826262F3500ACBBAF /* XIMEACameraPlugin.cpp */; };
 		E1D1483A2626386000ACBBAF /* XIMEACamera.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1D1480E262623E500ACBBAF /* XIMEACamera.bundle */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		E10809D12667DAE80004D224 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E10809D32667DB130004D224 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		E10809DB266937730004D224 /* MWComponents.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = MWComponents.yaml; sourceTree = "<group>"; };
 		E138B53F2649D3BE00F8E332 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E1D1480E262623E500ACBBAF /* XIMEACamera.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XIMEACamera.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D14811262623E500ACBBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				E1D14811262623E500ACBBAF /* Info.plist */,
 				E1D1483F2626390600ACBBAF /* XIMEACamera-Prefix.pch */,
+				E10809DB266937730004D224 /* MWComponents.yaml */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10809DC266937730004D224 /* MWComponents.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
