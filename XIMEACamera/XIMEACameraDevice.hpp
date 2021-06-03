@@ -16,6 +16,7 @@ BEGIN_NAMESPACE_MW
 class XIMEACameraDevice : public IODevice, boost::noncopyable {
     
 public:
+    static const std::string SERIAL_NUMBER;
     static const std::string EXPOSURE_TIME;
     static const std::string CAPTURE_INTERVAL;
     static const std::string IMAGE_DATA;
@@ -37,6 +38,7 @@ private:
     void captureImage(MWTime currentCaptureInterval);
     void processCapturedImage();
     
+    const std::string serialNumber;
     const VariablePtr exposureTime;
     const VariablePtr captureInterval;
     const VariablePtr imageData;

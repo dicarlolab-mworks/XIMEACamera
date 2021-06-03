@@ -35,6 +35,7 @@ inline bool logError(XI_RETURN status, const char *msg) {
 END_NAMESPACE()
 
 
+const std::string XIMEACameraDevice::SERIAL_NUMBER("serial_number");
 const std::string XIMEACameraDevice::EXPOSURE_TIME("exposure_time");
 const std::string XIMEACameraDevice::CAPTURE_INTERVAL("capture_interval");
 const std::string XIMEACameraDevice::IMAGE_DATA("image_data");
@@ -45,6 +46,7 @@ void XIMEACameraDevice::describeComponent(ComponentInfo &info) {
     
     info.setSignature("iodevice/ximea_camera");
     
+    info.addParameter(SERIAL_NUMBER, false);
     info.addParameter(EXPOSURE_TIME);
     info.addParameter(CAPTURE_INTERVAL);
     info.addParameter(IMAGE_DATA);
@@ -53,6 +55,7 @@ void XIMEACameraDevice::describeComponent(ComponentInfo &info) {
 
 XIMEACameraDevice::XIMEACameraDevice(const ParameterValueMap &parameters) :
     IODevice(parameters),
+    serialNumber(parameters[SERIAL_NUMBER].str()),
     exposureTime(parameters[EXPOSURE_TIME]),
     captureInterval(parameters[CAPTURE_INTERVAL]),
     imageData(parameters[IMAGE_DATA]),
@@ -83,9 +86,22 @@ bool XIMEACameraDevice::initialize() {
         return false;
     }
     
-    // TODO: If there's more than one device, make the user pick one by serial number.
-    // For now, just open the first one.
-    if (logError(xiOpenDevice(0, &handle), "Cannot open device")) {
+    XI_RETURN status = XI_OK;
+    if (serialNumber.empty()) {
+        if (numDevices > 1) {
+            logError("Multiple devices detected.  Please specify the serial number of the desired device.");
+            return false;
+        }
+        // Open the one available device
+        status = xiOpenDevice(0, &handle);
+    } else {
+        status = xiOpenDeviceBy(XI_OPEN_BY_SN, serialNumber.c_str(), &handle);
+        if (status == XI_NO_DEVICES_FOUND) {
+            LOG_ERROR("Device with serial number \"%s\" was not found", serialNumber.c_str());
+            return false;
+        }
+    }
+    if (logError(status, "Cannot open device")) {
         return false;
     }
     
