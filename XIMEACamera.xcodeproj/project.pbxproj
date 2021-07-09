@@ -275,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1D1481E26262FB600ACBBAF /* macOS_Plugin.xcconfig */;
 			buildSettings = {
+				ARCHS = x86_64;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XIMEACamera/XIMEACamera-Prefix.pch";
 				INFOPLIST_FILE = XIMEACamera/Info.plist;
