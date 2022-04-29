@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+
+framework_name=m3api.framework
+
+for framework_arch in arm64 x86_64; do
+    framework_dir=~/Library/Frameworks/$framework_arch
+    /bin/mkdir -p "$framework_dir"
+    cd "$framework_dir"
+    /bin/rm -Rf $framework_name
+    if [[ $framework_arch == $(/usr/bin/uname -m) ]]; then
+        /bin/ln -s /Library/Frameworks/$framework_name
+    else
+        /bin/cp -R /Volumes/XIMEA/$framework_name .
+        /usr/bin/xattr -dr com.apple.quarantine $framework_name
+    fi
+done

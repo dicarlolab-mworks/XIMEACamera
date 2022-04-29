@@ -40,7 +40,6 @@
 		E1D1481926262F3500ACBBAF /* XIMEACameraPlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1D1481826262F3500ACBBAF /* XIMEACameraPlugin.cpp */; };
 		E1D1483A2626386000ACBBAF /* XIMEACamera.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = E1D1480E262623E500ACBBAF /* XIMEACamera.bundle */; };
 		E1D14842262639F200ACBBAF /* MWorksCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D14841262639F200ACBBAF /* MWorksCore.framework */; };
-		E1D1484726263AC800ACBBAF /* m3api.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D1484626263AC800ACBBAF /* m3api.framework */; };
 		E1D148612627311300ACBBAF /* XIMEACameraDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1D1485F2627311300ACBBAF /* XIMEACameraDevice.cpp */; };
 /* End PBXBuildFile section */
 
@@ -86,7 +85,6 @@
 		E1D1481E26262FB600ACBBAF /* macOS_Plugin.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = macOS_Plugin.xcconfig; sourceTree = "<group>"; };
 		E1D1483F2626390600ACBBAF /* XIMEACamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XIMEACamera-Prefix.pch"; sourceTree = "<group>"; };
 		E1D14841262639F200ACBBAF /* MWorksCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MWorksCore.framework; path = "/Library/Application Support/MWorks/Frameworks/MWorksCore.framework"; sourceTree = "<absolute>"; };
-		E1D1484626263AC800ACBBAF /* m3api.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = m3api.framework; path = /Library/Frameworks/m3api.framework; sourceTree = "<absolute>"; };
 		E1D1485F2627311300ACBBAF /* XIMEACameraDevice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = XIMEACameraDevice.cpp; sourceTree = "<group>"; };
 		E1D148602627311300ACBBAF /* XIMEACameraDevice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = XIMEACameraDevice.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +98,6 @@
 				E138B5402649D3BE00F8E332 /* CoreGraphics.framework in Frameworks */,
 				E10809D42667DB130004D224 /* CoreServices.framework in Frameworks */,
 				E10809D22667DAE80004D224 /* ImageIO.framework in Frameworks */,
-				E1D1484726263AC800ACBBAF /* m3api.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +160,6 @@
 				E138B53F2649D3BE00F8E332 /* CoreGraphics.framework */,
 				E10809D32667DB130004D224 /* CoreServices.framework */,
 				E10809D12667DAE80004D224 /* ImageIO.framework */,
-				E1D1484626263AC800ACBBAF /* m3api.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,10 +271,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1D1481E26262FB600ACBBAF /* macOS_Plugin.xcconfig */;
 			buildSettings = {
-				ARCHS = x86_64;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(USER_LIBRARY_DIR)/Frameworks/$(CURRENT_ARCH)",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XIMEACamera/XIMEACamera-Prefix.pch";
 				INFOPLIST_FILE = XIMEACamera/Info.plist;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					m3api,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.mworks-project.XIMEACamera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
