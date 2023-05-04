@@ -4,7 +4,7 @@
 framework_name=m3api.framework
 
 for framework_arch in arm64 x86_64; do
-    framework_dir=~/Library/Frameworks/$framework_arch
+    framework_dir=~/Library/Application\ Support/MWorks/Developer/Frameworks/$framework_arch
     /bin/mkdir -p "$framework_dir"
     cd "$framework_dir"
     /bin/rm -Rf $framework_name

@@ -272,7 +272,7 @@
 			baseConfigurationReference = E1D1481E26262FB600ACBBAF /* macOS_Plugin.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(USER_LIBRARY_DIR)/Frameworks/$(CURRENT_ARCH)",
+					"$(USER_LIBRARY_DIR)/Application\\ Support/MWorks/Developer/Frameworks/$(CURRENT_ARCH)",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
