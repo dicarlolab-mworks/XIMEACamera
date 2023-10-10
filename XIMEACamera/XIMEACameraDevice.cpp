@@ -292,7 +292,10 @@ void XIMEACameraDevice::processCapturedImage() {
     
     auto imageFileData = CFMutableDataPtr::created(CFDataCreateMutable(kCFAllocatorDefault, 0));
     auto imageDest = cf::ObjectPtr<CGImageDestinationRef>::created(CGImageDestinationCreateWithData(imageFileData.get(),
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
                                                                                                     kUTTypeJPEG,
+#pragma clang diagnostic pop
                                                                                                     1,
                                                                                                     nullptr));
     
